@@ -347,8 +347,7 @@ let other = []
 
 for(let i = 0; i < users.length; i++) {
     let key = users[i].email.split(".").at(-1)
-    if (emails[key]) emails[key].push(users[i].email)
-    else other.push(users[i].email)
+    emails[key] ? emails[key].push(users[i].email) : other.push(users[i].email)
 }
 
 console.log(emails)
