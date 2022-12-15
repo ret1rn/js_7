@@ -90,10 +90,16 @@ let b = {
 for (let i = 0; i < arr.length; i++) {
     if (arr[i].completed === true) {
         a.count++
-        a.arr.push(arr[i])
+        a.arr.push({
+            id: arr[i].id,
+            title: arr[i].title
+        })
     } else {
         b.count++
-        b.arr.push(arr[i])
+        b.arr.push({
+            id: arr[i].id,
+            title: arr[i].title
+        })
     }
 }
 
